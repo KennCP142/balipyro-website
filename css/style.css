@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@900&family=Nunito:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
+.w-100 {
+  height: 100vh;
+}
+
+.slider-area {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  margin-top: -120px;
+}
+.slider-area .carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  position: relative;
+}
+.slider-area .carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.slider-area .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.slider-area .carousel-caption {
+  text-align: left;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+  z-index: 2;
+}
+.slider-area .carousel-caption h5 {
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.slider-area .carousel-caption h2 {
+  font-size: 55px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.slider-area .carousel-inner:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.about-area {
+  font-family: "Nunito", sans-serif;
+}
+.about-area .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.about-area .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.about-area .about-title h2 {
+  font-family: "Barlow", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.about-area .about-slogan h5 {
+  font-family: "Barlow", sans-serif;
+  font-size: 32px;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+.about-area .about-content p {
+  font-size: 22px;
+}
+.about-area .about-btn a {
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 12px;
+  background-color: #e81828;
+  border-color: #e81828;
+  font-weight: bold;
+}
+.about-area .about-btn a:hover {
+  background-color: #ba131f;
+}
+.about-area .about-logo img {
+  width: 365px;
+  height: auto;
+}
+
+.services-area {
+  font-family: "Nunito", sans-serif;
+}
+.services-area .container {
+  padding-bottom: 100px;
+}
+.services-area .container {
+  padding-bottom: 100px;
+}
+.services-area .services-title h2 {
+  font-family: "Barlow", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@media only screen and (max-width: 768px) {
+  .services-area .services-title h2 {
+    font-size: 32px;
+  }
+}
+.services-area .services-btn a {
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 12px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #e81828;
+  border-color: #e81828;
+  font-weight: bold;
+}
+@media only screen and (max-width: 1400px) {
+  .services-area .services-btn {
+    margin-bottom: 55px;
+  }
+}
+.services-area .services-btn a:hover {
+  background-color: #ba131f;
+}
+.services-area .services-thumb {
+  width: 100%;
+  max-width: 850px;
+  height: 450px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.services-area .services-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the image */
+}
+
+@media only screen and (max-width: 576px) {
+  .footer-area .footer-contact .col-10 {
+    text-align: justify;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer-area .footer-brand,
+  .footer-area .footer-sitemap {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer-area .footer-brand,
+  .footer-area .footer-sitemap {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .slider-area {
+    margin-top: 0;
+  }
+  .slider-area .carousel-caption h5 {
+    font-size: 30px;
+  }
+  .slider-area .carousel-caption h2 {
+    font-size: 43px;
+  }
+  .about-area .about-title,
+  .about-area .about-slogan,
+  .about-area .about-content,
+  .about-area .about-btn {
+    text-align: center;
+  }
+  .about-area .about-title h2,
+  .about-area .about-title h5,
+  .about-area .about-title p,
+  .about-area .about-slogan h2,
+  .about-area .about-slogan h5,
+  .about-area .about-slogan p,
+  .about-area .about-content h2,
+  .about-area .about-content h5,
+  .about-area .about-content p,
+  .about-area .about-btn h2,
+  .about-area .about-btn h5,
+  .about-area .about-btn p {
+    text-align: center;
+  }
+  .about-area .about-title h2 {
+    font-size: 35px;
+  }
+  .about-area .about-slogan h5 {
+    font-size: 24px;
+  }
+  .about-area .about-content p {
+    font-size: 18px;
+  }
+  .about-area .about-logo img {
+    margin-top: 30px;
+  }
+  .services-area .services-label {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .about-area .about-logo img {
+    width: 300px;
+    height: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
