@@ -6,11 +6,10 @@
 .slider-area {
   font-family: "Barlow", sans-serif;
   font-weight: 900;
-  margin-top: -120px;
 }
 .slider-area .carousel-item {
   height: 100vh;
-  min-height: 300px;
+  min-height: 500px;
   position: relative;
 }
 .slider-area .carousel-item::after {
@@ -41,12 +40,12 @@
   z-index: 2;
 }
 .slider-area .carousel-caption h5 {
-  font-size: 35px;
+  font-size: 28px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 .slider-area .carousel-caption h2 {
-  font-size: 55px;
+  font-size: 45px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }

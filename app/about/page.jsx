@@ -10,7 +10,7 @@ export default function About() {
     <>
       {/* Banner area */}
             <section
-        className="about-banner mb-5"
+        className="about-banner -5"
         style={{ backgroundImage: 'url(/img/index/SNY00213.JPG)' }}
       >
         <div className="container-fluid">

@@ -1,27 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
-  const isHomePage = pathname === '/';
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.pageYOffset > 300) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const isActive = (path) => pathname === path;
 
@@ -30,11 +14,7 @@ export default function Header() {
       <div className="header-area">
         <div id="sticky-header" className="main-header-area">
           <nav 
-            className={`navbar navbar-expand-lg navbar-dark ${
-              isHomePage 
-                ? (isScrolled ? 'navbar-scroll shadow' : 'navbar-transparent')
-                : (isScrolled ? 'navbar-scroll shadow' : 'sticky-top')
-            }`}
+            className="navbar navbar-expand-lg navbar-dark"
             data-aos="fade-down"
           >
             <div className="container">
@@ -93,7 +73,6 @@ export default function Header() {
           </nav>
         </div>
       </div>
-      <div id="navbarFill" className={`navbar-fill-space ${!isScrolled ? 'visually-hidden' : ''}`}></div>
     </>
   );
 }
