@@ -8,30 +8,40 @@ export const metadata = {
 export default function Services() {
   return (
     <>
-      {/* Banner area */}
+      {/* Banner area — uses Image fill so Vercel optimizer serves AVIF/WebP */}
       <section
         className="services-banner mb-5"
-        style={{ backgroundImage: "url(/img/portofolio/porto-4.jpg)" }}
+        style={{ position: 'relative', overflow: 'hidden' }}
       >
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-8">
-              <h1
-                className="text-center mb-4"
-                data-aos="zoom-in"
-                data-aos-duration="600"
-                data-aos-delay="600"
-              >
-                Our Services
-              </h1>
-              <h3
-                className="text-center"
-                data-aos="zoom-in"
-                data-aos-duration="600"
-                data-aos-delay="1200"
-              >
-                See what kind of services we offer for our customers!
-              </h3>
+        <Image
+          src="/img/portofolio/porto-4.jpg"
+          alt="Services banner"
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          priority
+        />
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-8">
+                <h1
+                  className="text-center mb-4"
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
+                  data-aos-delay="600"
+                >
+                  Our Services
+                </h1>
+                <h3
+                  className="text-center"
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
+                  data-aos-delay="1200"
+                >
+                  See what kind of services we offer for our customers!
+                </h3>
+              </div>
             </div>
           </div>
         </div>
@@ -71,6 +81,8 @@ export default function Services() {
                         alt="Lighting"
                         width={280}
                         height={280}
+                        sizes="(max-width: 576px) 50vw, 200px"
+                        loading="lazy"
                         style={{
                           objectFit: "contain",
                           maxWidth: "100%",
@@ -104,6 +116,8 @@ export default function Services() {
                         alt="Genset"
                         width={280}
                         height={280}
+                        sizes="(max-width: 576px) 50vw, 200px"
+                        loading="lazy"
                         style={{
                           objectFit: "contain",
                           maxWidth: "100%",
@@ -137,6 +151,8 @@ export default function Services() {
                         alt="Sound"
                         width={280}
                         height={280}
+                        sizes="(max-width: 576px) 50vw, 200px"
+                        loading="lazy"
                         style={{
                           objectFit: "contain",
                           maxWidth: "100%",
@@ -170,6 +186,8 @@ export default function Services() {
                         alt="LED Screen"
                         width={280}
                         height={280}
+                        sizes="(max-width: 576px) 50vw, 200px"
+                        loading="lazy"
                         style={{
                           objectFit: "contain",
                           maxWidth: "100%",
@@ -203,6 +221,8 @@ export default function Services() {
                         alt="Effects"
                         width={280}
                         height={280}
+                        sizes="(max-width: 576px) 50vw, 200px"
+                        loading="lazy"
                         style={{
                           objectFit: "contain",
                           maxWidth: "100%",

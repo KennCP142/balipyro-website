@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import EventCarousel from '@/components/EventCarousel';
 
 export const metadata = {
@@ -730,30 +731,40 @@ const events = [
 export default function OurEvent() {
   return (
     <>
-      {/* Banner area */}
-            <section
+      {/* Banner area — uses Image fill so Vercel optimizer serves AVIF/WebP */}
+      <section
         className="our-event-banner mb-5"
-        style={{ backgroundImage: 'url(/img/index/IMG_4192.jpg)' }}
+        style={{ position: 'relative', overflow: 'hidden' }}
       >
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-8">
-              <h1
-                className="text-center mb-4"
-                data-aos="zoom-in"
-                data-aos-duration="600"
-                data-aos-delay="600"
-              >
-                Our Events Portofolio
-              </h1>
-              <h3
-                className="text-center"
-                data-aos="zoom-in"
-                data-aos-duration="600"
-                data-aos-delay="1200"
-              >
-                See our portfolio of unforgettable events!
-              </h3>
+        <Image
+          src="/img/index/IMG_4192.jpg"
+          alt="Our Events banner"
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          priority
+        />
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-8">
+                <h1
+                  className="text-center mb-4"
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
+                  data-aos-delay="600"
+                >
+                  Our Events Portofolio
+                </h1>
+                <h3
+                  className="text-center"
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
+                  data-aos-delay="1200"
+                >
+                  See our portfolio of unforgettable events!
+                </h3>
+              </div>
             </div>
           </div>
         </div>

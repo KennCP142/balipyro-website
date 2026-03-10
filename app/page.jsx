@@ -42,6 +42,7 @@ export default function Home() {
                   alt="Event lighting"
                   width={1920}
                   height={1080}
+                  sizes="100vw"
                   priority
                 />
                 <div className="carousel-caption">
@@ -60,6 +61,8 @@ export default function Home() {
                   alt="Event stage"
                   width={1920}
                   height={1080}
+                  sizes="100vw"
+                  loading="lazy"
                 />
                 <div className="carousel-caption">
                   <h5>Hi! Welcome</h5>
@@ -73,6 +76,8 @@ export default function Home() {
                   alt="Event production"
                   width={1920}
                   height={1080}
+                  sizes="100vw"
+                  loading="lazy"
                 />
                 <div className="carousel-caption">
                   <h5>Hi! Welcome</h5>
@@ -203,6 +208,8 @@ export default function Home() {
                     className="img-fluid"
                     width={850}
                     height={450}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    loading="lazy"
                     style={{ maxWidth: '100%' }}
                   />
                 </div>
@@ -244,6 +251,8 @@ export default function Home() {
                     className="img-fluid"
                     width={850}
                     height={450}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    loading="lazy"
                     style={{ maxWidth: '100%' }}
                   />
                 </div>

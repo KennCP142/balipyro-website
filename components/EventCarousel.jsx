@@ -26,17 +26,34 @@ export default function EventCarousel({ carouselId, images, event }) {
                 ))}
               </div>
               <div className="carousel-inner">
-                {images.map((img, index) => (
-                  <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-                    <Image
-                      src={img}
-                      className="img-fluid"
-                      alt={`${event.title} - Image ${index + 1}`}
-                      width={800}
-                      height={600}
-                    />
-                  </div>
-                ))}
+                {images.map((img, index) => {
+                  const isVideo = img.endsWith('.mp4');
+                  return (
+                    <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                      {isVideo ? (
+                        <video
+                          src={img}
+                          className="img-fluid"
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          style={{ width: '100%', height: 'auto' }}
+                        />
+                      ) : (
+                        <Image
+                          src={img}
+                          className="img-fluid"
+                          alt={`${event.title} - Image ${index + 1}`}
+                          width={800}
+                          height={600}
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          loading={index === 0 ? 'eager' : 'lazy'}
+                        />
+                      )}
+                    </div>
+                  );
+                })}
               </div>
               <button
                 className="carousel-control-prev"

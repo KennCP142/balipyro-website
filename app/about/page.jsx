@@ -8,30 +8,38 @@ export const metadata = {
 export default function About() {
   return (
     <>
-      {/* Banner area */}
-            <section
-        className="about-banner -5"
-        style={{ backgroundImage: 'url(/img/index/SNY00213.JPG)' }}
-      >
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-8">
-              <h1
-                className="text-center mb-4"
-                data-aos="zoom-in"
-                data-aos-duration="600"
-                data-aos-delay="600"
-              >
-                About Us
-              </h1>
-              <h3
-                className="text-center"
-                data-aos="zoom-in"
-                data-aos-duration="600"
-                data-aos-delay="1200"
-              >
-                Get to know more about us!
-              </h3>
+      {/* Banner area — uses Image fill so Vercel optimizer serves AVIF/WebP */}
+      <section className="about-banner" style={{ position: 'relative', overflow: 'hidden' }}>
+        <Image
+          src="/img/index/SNY00213.JPG"
+          alt="About Us banner"
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          priority
+        />
+        {/* Overlay keeps the original dark tint */}
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-8">
+                <h1
+                  className="text-center mb-4"
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
+                  data-aos-delay="600"
+                >
+                  About Us
+                </h1>
+                <h3
+                  className="text-center"
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
+                  data-aos-delay="1200"
+                >
+                  Get to know more about us!
+                </h3>
+              </div>
             </div>
           </div>
         </div>
@@ -77,6 +85,7 @@ export default function About() {
                 alt="Bali Pyro 2 Logo"
                 width={250}
                 height={100}
+                loading="lazy"
               />
               <p className="text-center" style={{ color: 'white' }}>
                 We are a lighting rental service provider based in Bali, Indonesia. We can provide
